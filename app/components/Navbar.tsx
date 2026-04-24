@@ -27,55 +27,58 @@ const Navbar = () => {
         <h1 className="text-3xl sm:text-3xl font-extrabold lg:text-4xl text-secondary-color-3 font-display">
           Anwesh
         </h1>
-        <p className="text-base sm:text-lg lg:text-xl font-medium font-grotesk text-white opacity-90 flex items-baseline">
+        <p className="text-base sm:text-lg lg:text-xl font-medium font-grotesk text-white opacity-90">
           Ale
-          <span className="ml-1">
-            <ThemeSwitcher />
-          </span>
         </p>
       </Link>
-      <div className="hidden md:flex items-center gap-2  leading-relaxed text-base md:text-lg ">
-        <nav className="w-full flex flex-row items-center">
-          <ul className="w-full flex flex-row justify-start items-center text-xl gap-4">
-            {sections.map((section, id) => (
-              <Button
-                variant={"link"}
-                key={id}
-                className="hidden lg:inline-block"
-                asChild
-              >
-              <Link key={id} href={section.idRoute} className="">
-                {section.name}
-              </Link>
-               </Button>
-            ))}
-            <li className="hidden lg:inline-block">
-              <Button asChild variant={"outline"}>
-                <Link
-                  href="https://drive.google.com/file/d/1wmYQITylKoNXUX3pzGyXvhKHYi5WvR6Z/view?usp=sharing"
-                  className=" border-[1px] border-black"
-                  target="_blank"
-                  rel="noopener noreferrer"
+
+      <div className="flex items-center gap-3 lg:gap-4">
+        <div className="hidden md:flex items-center gap-2 leading-relaxed text-base md:text-lg">
+          <nav className="flex flex-row items-center">
+            <ul className="flex flex-row justify-start items-center text-xl gap-4">
+              {sections.map((section, id) => (
+                <Button
+                  variant={"link"}
+                  key={id}
+                  className="hidden lg:inline-block"
+                  asChild
                 >
-                  View Resume
-                  <HiDocumentText size={25} className="ml-2" />
-                </Link>
-              </Button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div className="lg:hidden z-50">
-        <button
-          className={`hamburger ${
-            isOpen ? "open" : ""
-          } relative z-30 w-8 h-4 flex flex-col justify-between items-center`}
-          onClick={toggleMenu}
-        >
-          <span className="line block w-full h-0.5 dark:bg-secondary-color-3 bg-black transition-transform duration-300 ease-in-out origin-center"></span>
-          <span className="line block w-full h-0.5 dark:bg-secondary-color-3 bg-black transition-opacity duration-300 ease-in-out"></span>
-          <span className="line block w-full h-0.5 dark:bg-secondary-color-3 bg-black transition-transform duration-300 ease-in-out origin-center"></span>
-        </button>
+                  <Link key={id} href={section.idRoute} className="">
+                    {section.name}
+                  </Link>
+                </Button>
+              ))}
+              <li className="hidden lg:inline-block">
+                <Button asChild variant={"outline"}>
+                  <Link
+                    href="https://drive.google.com/file/d/1wmYQITylKoNXUX3pzGyXvhKHYi5WvR6Z/view?usp=sharing"
+                    className=" border-[1px] border-black"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Resume
+                    <HiDocumentText size={25} className="ml-2" />
+                  </Link>
+                </Button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <ThemeSwitcher />
+
+        <div className="lg:hidden z-50">
+          <button
+            className={`hamburger ${
+              isOpen ? "open" : ""
+            } relative z-30 w-8 h-4 flex flex-col justify-between items-center`}
+            onClick={toggleMenu}
+          >
+            <span className="line block w-full h-0.5 dark:bg-secondary-color-3 bg-black transition-transform duration-300 ease-in-out origin-center"></span>
+            <span className="line block w-full h-0.5 dark:bg-secondary-color-3 bg-black transition-opacity duration-300 ease-in-out"></span>
+            <span className="line block w-full h-0.5 dark:bg-secondary-color-3 bg-black transition-transform duration-300 ease-in-out origin-center"></span>
+          </button>
+        </div>
       </div>
       <motion.div
         initial={{ x: "100%" }}
@@ -114,7 +117,6 @@ const Navbar = () => {
                 <HiDocumentText size={25} />
               </Link>
             </Button>
-            <ThemeSwitcher />
           </nav>
         </motion.div>
       </motion.div>
