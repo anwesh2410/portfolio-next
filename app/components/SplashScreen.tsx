@@ -12,11 +12,11 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
           transition={{ duration: 1, repeat: Infinity, repeatType: "mirror" }}
           onAnimationComplete={finishLoading}
         >
-          <h1 className="text-3xl sm:text-3xl font-bold lg:text-4xl text-secondary-color-3 text-center font-idgrotesk">
-            Ale
-          </h1>
-          <p className="text-xl sm:text-2xl lg:text-2xl font-extrabold text-center font-grotesk">
+          <h1 className="text-5xl sm:text-5xl lg:text-6xl font-extrabold text-secondary-color-3 text-center font-display tracking-tight">
             Anwesh
+          </h1>
+          <p className="text-base sm:text-lg lg:text-xl font-medium text-center font-grotesk text-white dark:text-white text-opacity-90 mt-1">
+            Ale
           </p>
         </motion.div>
       </div>

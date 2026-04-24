@@ -22,15 +22,16 @@ const Navbar = () => {
     >
       <Link
         href="/"
-        className="flex justify-start sm:justify-center items-center  uppercase tracking-wider"
+        className="flex justify-start sm:justify-center items-baseline gap-2 uppercase tracking-wider"
       >
-        <h1 className="text-3xl sm:text-3xl font-bold lg:text-4xl text-secondary-color-3 font-idgrotesk">
-          Ale
+        <h1 className="text-3xl sm:text-3xl font-extrabold lg:text-4xl text-secondary-color-3 font-display">
+          Anwesh
         </h1>
-        <p className="text-xl sm:text-2xl lg:text-2xl font-extrabold font-grotesk">
-          Anw
-          <ThemeSwitcher />
-          esh
+        <p className="text-base sm:text-lg lg:text-xl font-medium font-grotesk text-white opacity-90 flex items-baseline">
+          Ale
+          <span className="ml-1">
+            <ThemeSwitcher />
+          </span>
         </p>
       </Link>
       <div className="hidden md:flex items-center gap-2  leading-relaxed text-base md:text-lg ">

@@ -11,8 +11,13 @@ const Header = () => {
       >
         <div className="flex flex-col gap-2">
           <span className="text-lg">Hi, I&apos;m</span>
-          <h1 className="font-bold text-6xl md:text-7xl font-display">
-            Ale Anwesh
+          <h1 className="font-display flex items-baseline flex-wrap gap-x-4">
+            <span className="font-extrabold text-6xl md:text-7xl text-secondary-color-3 leading-none">
+              Anwesh
+            </span>
+            <span className="font-medium text-2xl md:text-3xl text-white opacity-90 leading-none">
+              Ale
+            </span>
           </h1>
         </div>
 
