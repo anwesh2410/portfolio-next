@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
@@ -7,7 +8,13 @@ import SplashScreenManager from "./components/SplashScreenManager";
 import { Providers } from "./providers";
 import { Analytics } from "@vercel/analytics/react";
 import { Archivo, Rubik, Sora } from "next/font/google";
-import TopoWaves from "./components/TopoWaves";
+
+// Lazy-load the 3D topographic background — defers ~53 kB of three.js + postprocessing
+// until after first paint, and skips SSR where WebGL isn't available anyway.
+const TopoWaves = dynamic(() => import("./components/TopoWaves"), {
+  ssr: false,
+  loading: () => null,
+});
 
 export const rubik = Rubik({
   subsets: ["latin"],

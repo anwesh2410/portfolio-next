@@ -141,7 +141,7 @@ export const projects: Project[] = [
     type: "Bachelor Thesis",
     description:
       "Event-centric dynamic-graph Retrieval-Augmented Generation system for temporal question answering over PDFs. Extended the open-source RingBDStack/DyG-RAG framework with Gemini 2.5 integration, a Streamlit UI, and 2D/3D network visualisations. Cut LLM operating cost 96% vs. GPT-4o, achieved 100% event-extraction success, 3–6s query latency (GPU BERT NER + cross-encoder), and 90% cost savings on repeated queries via multi-level caching. Bachelor Thesis under Dr. Binod Kumar.",
-    image: "/ai_banner.png",
+    image: "/ai_banner.jpg",
     githubLink: "https://github.com/anwesh2410/Temporal_RAG",
     stacks: [
       "Python",
@@ -241,7 +241,7 @@ export const projects: Project[] = [
     type: "IIT-J × IARI Research",
     description:
       "Research project with IIT Jodhpur × Indian Agricultural Research Institute under Dr. Bikash Santra. Trained and compared U-Net, Mask R-CNN, DeepLab, Faster R-CNN, and YOLO for agricultural phenotype segmentation on a curated dataset of 158 specialised images; lifted IOU accuracy from 61% to 71% through iterative model tuning. Delivered a custom annotation + predictive-analysis tool with 30+ features for internal IARI researchers.",
-    image: "/plant_phenomics.png",
+    image: "/plant_phenomics.jpg",
     stacks: [
       "Python",
       "PyTorch",
